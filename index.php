@@ -1,7 +1,7 @@
 <?php
     if ( isset($_POST['login']) && isset($_POST['password'])){
-        setcookie('login', $_POST['login'], time() + 365*24*3600);
-        setcookie('password', $_POST['password'], time() + 365*24*3600);
+        setcookie('login', $_POST['login'], time() + 365*24*3600, '/');
+        setcookie('password', $_POST['password'], time() + 365*24*3600, '/');
     }
 ?>
 <!DOCTYPE html>
@@ -33,5 +33,6 @@
         <label for="password">Password : <input type="password" name="password" id="password"></label>
         <input type="submit" value="Envoyer" id="sendBtn">
     </form>
+    <p><a href="../index.php">Retour au menu</a></p>
 </body>
 </html>
