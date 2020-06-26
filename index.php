@@ -1,7 +1,8 @@
 <?php
-    if ( isset($_POST['login']) && isset($_POST['password'])){
-        setcookie('login', $_POST['login'], time() + 365*24*3600, '/');
-        setcookie('password', $_POST['password'], time() + 365*24*3600, '/');
+    //si login et password sont set, on crée des cookie
+    if (!empty($_POST['login']) && !empty($_POST['password'])){
+        setcookie('login', $_POST['login'], time() + 365*24*3600, '/', 'partie8.tr', false);
+        setcookie('password', $_POST['password'], time() + 365*24*3600, '/', 'partie8.tr', false);
     }
 ?>
 <!DOCTYPE html>
